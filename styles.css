@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#phoneScreen {
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#phoneButtons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phoneRow {
+  display: flex;
+}
+
+.phoneButton {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.phoneFooter {
+  margin-top: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#phoneScreen {
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#phoneButtons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phoneRow {
+  display: flex;
+}
+
+.phoneButton {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.phoneFooter {
+  margin-top: 20px;
+}
+/* สไตล์เพิ่มเติมสำหรับ animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#passwordDisplay {
+  animation: bounce 0.5s ease-in-out; /* ใช้ animation ชื่อ bounce */
+}
