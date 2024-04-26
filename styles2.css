@@ -59,9 +59,10 @@ body {
 
 .gallery-image {
     box-sizing: border-box;
-    width: 100%; /* Adjusted for responsiveness */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 190px; /* Adjust max width if needed */
+    width: calc(33.33% - 10px); /* ปรับเป็น 33.33% ของขนาดคอนเทนเนอร์ ลบ 10px เพื่อให้มีช่องว่างระหว่างรูป */
+    max-width: 190px; /* ปรับความกว้างสูงสุดของรูปภาพ */
+    height: auto; /* รักษาอัตราส่วนของรูปภาพ */
+    margin-bottom: 10px; /* เพิ่มขอบล่างสำหรับช่องว่างระหว่างรูป */
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -70,9 +71,7 @@ body {
     text-align: center;
     cursor: pointer;
     transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block; /* เปลี่ยนเป็น inline-block เพื่อให้รูปภาพเรียงตามแนวนอนในคอนเทนเนอร์ */
     user-select: none;
     font-weight: bolder;
     color: black;
