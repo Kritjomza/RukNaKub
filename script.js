@@ -1,5 +1,5 @@
 var password = "";
-var expectedPassword = "071245"; // รหัสผ่านที่คาดหวัง
+var expectedPassword = "171393"; // รหัสผ่านที่คาดหวัง
 
 function addDigit(digit) {
     password += digit.toString();
