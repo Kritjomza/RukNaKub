@@ -28,12 +28,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* .cover-picture {
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 10px;
-} */
-
 .profile-info {
     margin-top: 20px;
     align-content: center;
@@ -48,8 +42,8 @@ body {
 
 .stat {
     flex: 1;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* เพิ่มเส้นขอบสำหรับแยกแต่ละส่วนของ stats */
-    padding: 10px; /* เพิ่มเส้นขอบสำหรับแยกแต่ละส่วนของ stats */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
     background-color: #f0f0f0;
 }
 
@@ -65,8 +59,9 @@ body {
 
 .gallery-image {
     box-sizing: border-box;
-    width: 190px;
-    height: 254px;
+    width: 100%; /* Adjusted for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 190px; /* Adjust max width if needed */
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -81,17 +76,18 @@ body {
     user-select: none;
     font-weight: bolder;
     color: black;
-  }
-  
-  .gallery-image:hover {
+}
+
+.gallery-image:hover {
     border: 1px solid black;
     transform: scale(1.05);
-  }
-  
-  .gallery-image:active {
+}
+
+.gallery-image:active {
     transform: scale(0.95) rotateZ(1.7deg);
-  }
-  .popup {
+}
+
+.popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -100,10 +96,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     z-index: 999;
-    max-height: 80vh; /* กำหนดความสูงสูงสุดของป๊อปอัพ */
-    overflow-y: auto; /* ทำให้เป็นไปได้ในการเลื่อนสครอลเป็นแนวดิ่ง */
+    max-height: 80vh;
+    overflow-y: auto;
 }
-
 
 .popup img {
     max-width: 100%;
@@ -111,6 +106,7 @@ body {
     display: block;
     margin: 0 auto;
 }
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -123,6 +119,5 @@ body {
 }
 
 .head1 {
-    font-size: 2rem
-    
+    font-size: 2rem;
 }
