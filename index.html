@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>❣เว็บไซต์ของเกด</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h2>กรุณาใส่รหัสผ่านคับ😚</h2>
-    <div id="phoneScreen">
-      <div id="display"> <!-- ตัวแสดงผล -->
-        <p id="passwordDisplay"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❣เว็บไซต์ของเกด</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>กรุณาใส่รหัสผ่านคับ😚</h2>
+      <div id="phoneScreen">
+        <div id="display">
+          <!-- ตัวแสดงผล -->
+          <p id="passwordDisplay"></p>
+        </div>
+        <div id="phoneButtons">
+          <div class="phoneRow">
+            <div class="phoneButton" onclick="addDigit(1)">1</div>
+            <div class="phoneButton" onclick="addDigit(2)">2</div>
+            <div class="phoneButton" onclick="addDigit(3)">3</div>
+          </div>
+          <div class="phoneRow">
+            <div class="phoneButton" onclick="addDigit(4)">4</div>
+            <div class="phoneButton" onclick="addDigit(5)">5</div>
+            <div class="phoneButton" onclick="addDigit(6)">6</div>
+          </div>
+          <div class="phoneRow">
+            <div class="phoneButton" onclick="addDigit(7)">7</div>
+            <div class="phoneButton" onclick="addDigit(8)">8</div>
+            <div class="phoneButton" onclick="addDigit(9)">9</div>
+          </div>
+          <div class="phoneRow">
+            <div class="phoneButton" onclick="addDigit(0)">0</div>
+          </div>
+        </div>
+        <div class="phoneFooter">
+          <button class="clear-button" onclick="clearInput()" type="button">
+            <p>Clear</p>
+          </button>
+        </div>
       </div>
-      <div id="phoneButtons">
-        <div class="phoneRow">
-          <div class="phoneButton" onclick="addDigit(1)">1</div>
-          <div class="phoneButton" onclick="addDigit(2)">2</div>
-          <div class="phoneButton" onclick="addDigit(3)">3</div>
-        </div>
-        <div class="phoneRow">
-          <div class="phoneButton" onclick="addDigit(4)">4</div>
-          <div class="phoneButton" onclick="addDigit(5)">5</div>
-          <div class="phoneButton" onclick="addDigit(6)">6</div>
-        </div>
-        <div class="phoneRow">
-          <div class="phoneButton" onclick="addDigit(7)">7</div>
-          <div class="phoneButton" onclick="addDigit(8)">8</div>
-          <div class="phoneButton" onclick="addDigit(9)">9</div>
-        </div>
-        <div class="phoneRow">
-          <div class="phoneButton" onclick="addDigit(0)">0</div>
-        </div>
-      </div>
-      <div class="phoneFooter">
-        <button class="clear-button" onclick="clearInput()" type="button">
-          <p>Clear</p>
-        </button>
-      </div>
+      <p id="message"></p>
+      <p id="digitCount">จำนวนตัวเลข: 0</p>
     </div>
-    <p id="message"></p>
-    <p id="digitCount">จำนวนตัวเลข: 0</p>
-  </div>
+    <audio id="audio1" autoplay onended="playNext('audio2')">
+      <source src="song1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audio2" onended="playNext('audio3')">
+      <source src="song2.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audio3" onended="playNext('audio4')">
+      <source src="song3.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audio4" onended="playNext('audio1')">
+      <source src="song4.mp3" type="audio/mpeg" />
+    </audio>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
